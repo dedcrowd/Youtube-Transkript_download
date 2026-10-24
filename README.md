@@ -1,14 +1,16 @@
-Too Many Request sorununu çözmek için 429 u yani Cookie-editör ile youtube cookielerini netscape ile export et ve böyle ver
-‘’’
-python3 yt_transcripts.py -t nahamsec —cookies ~/cookies.txt —sleep-min 8 —sleep-max 15
+### Too Many Request sorununu çözmek için 429 u yani Cookie-editör ile youtube cookielerini netscape ile export et ve böyle ver
 
-‘’’
-Kurulum
+```
+python3 yt_transcripts.py -t nahamsec —cookies ~/cookies.txt —sleep-min 8 —sleep-max 15
+```
+
+
+# Kurulum
 ```
 pip install -U yt-dlp
 pip install faster-whisper   # opsiyonel, kalite için önerilir
 ```
-Kullanım
+# Kullanım
 ```
 python yt_transcripts.py -t nahamsec
 ```
@@ -24,7 +26,7 @@ python yt_transcripts.py -t nahamsec —limit 3
 ```
 python yt_transcripts.py -t nahamsec —whisper always
 ```
-Dizin yapısı
+# Dizin yapısı
 Desktop/transcripts/<Kanal>/<Video Başlığı [id]>/ altında şunlar oluşuyor:
 
 • transcript.txt: temiz düz metin
@@ -34,9 +36,9 @@ Desktop/transcripts/<Kanal>/<Video Başlığı [id]>/ altında şunlar oluşuyor
 • metadata.json: başlık, tarih, süre, bölümler, transkript kaynağı
 • description.txt: video açıklaması (araç ve link listeleri burada çıkıyor)
 
-Kanal klasöründe ayrıca _index.json, _failed.txt ve run.log tutuluyor.
+# Kanal klasöründe ayrıca _index.json, _failed.txt ve run.log tutuluyor.
 
-Önlemler
+# Önlemler
 • Devam etme: İnternet kopsa veya Ctrl+C yapsan bile tekrar çalıştırınca bitenleri atlayıp kaldığı yerden devam ediyor.
 • Eksiksiz liste: Kanalın hem Videos hem Streams sekmesini tarıyor. NahamSec’te uzun canlı yayın kayıtları var, bunlar da dahil.
 • Altyazı kalitesi: Önce insan yazımı altyazıyı arıyor, yoksa otomatik olana düşüyor. Otomatik altyazı şüpheli derecede kısaysa veya hiç altyazı yoksa Whisper large-v3’e geçiyor. Whisper’a bug bounty terimlerini (SSRF, ffuf, nuclei vb.) ipucu olarak veriyor.
