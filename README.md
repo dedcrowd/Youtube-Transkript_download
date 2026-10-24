@@ -1,4 +1,8 @@
+Too Many Request sorununu çözmek için 429 u yani Cookie-editör ile youtube cookielerini netscape ile export et ve böyle ver
+‘’’
+python3 yt_transcripts.py -t nahamsec —cookies ~/cookies.txt —sleep-min 8 —sleep-max 15
 
+‘’’
 Kurulum
 ```
 pip install -U yt-dlp
