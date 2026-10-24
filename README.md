@@ -4,6 +4,12 @@
 python3 yt_transcripts.py -t nahamsec —cookies ~/cookies.txt —sleep-min 8 —sleep-max 15
 ```
 
+```shell
+python3 transkript2.py -f kanallar.txt —dry-run   # indirmeden plan
+python3 transkript2.py —status                    # hafıza özeti
+python3 transkript2.py -f kanallar.txt —order oldest —limit 20
+
+```
 
 # Kurulum
 ```
